@@ -26,7 +26,7 @@ return new class extends Migration
             $table->json('products');
             $table->json('address');
             $table->float('delivery_fee');
-            $table->float('amount');
+            $table->float('amount')->unique();
             $table->timestamp('shipped_at')->nullable();
             $table->timestamps();
         });
