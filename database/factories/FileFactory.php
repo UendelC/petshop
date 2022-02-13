@@ -17,7 +17,11 @@ class FileFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'uuid' => $this->faker->uuid(),
+            'name' => $this->faker->name(),
+            'path' => $this->faker->url(),
+            'type' => $this->faker->mimeType(),
+            'size' => $this->faker->randomNumber(),
         ];
     }
 }
