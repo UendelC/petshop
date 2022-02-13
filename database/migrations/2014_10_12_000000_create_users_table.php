@@ -22,7 +22,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->foreign('avatar')->nullable()->references('uuid')->on('files');
+            $table->foreignUuid('avatar')
+                ->nullable()->references('uuid')->on('files');
             $table->string('address');
             $table->string('phone_number');
             $table->boolean('is_marketing')->default(false);
