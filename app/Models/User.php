@@ -46,4 +46,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(File::class, 'uuid', 'avatar');
     }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
